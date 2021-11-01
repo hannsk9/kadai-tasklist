@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     
     if @user.save
       flash[:success] = 'ユーザを登録しました。'
-      #render template: "tasks/index"
+      redirect_to root_url
     else
       flash.now[:denger] = 'ユーザの登録に失敗しました。'
       render :new
